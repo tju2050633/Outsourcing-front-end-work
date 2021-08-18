@@ -1,0 +1,54 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  height: 13rem;
+  transform: translate(6rem, -13rem);
+  justify-content: center;
+}
+.info .item {
+  border-right: solid 1px #416388;
+  color: #fff;
+  font-size: 0.5rem;
+  text-align: center;
+  font-family: Monospace;
+}
+.info .headline .item:nth-child(1),
+.info .row .item:nth-child(1),
+.info .headline .item:nth-child(2),
+.info .row .item:nth-child(2),
+.info .headline .item:nth-child(3),
+.info .row .item:nth-child(3) {
+  flex: 1;
+}
+.info .headline .item:nth-child(4),
+.info .row .item:nth-child(4),
+.info .headline .item:nth-child(5),
+.info .row .item:nth-child(5) {
+  flex: 1;
+}
+.info .headline .item:nth-child(6),
+.info .row .item:nth-child(6) {
+  flex: 1;
+}
+.info .headline {
+  display: flex;
+  flex: 1.5;
+  background-color: #1D3957;
+}
+.info .headline .item p {
+  margin-top: 0.8rem;
+}
+.info .row {
+  display: flex;
+  flex: 1;
+}
+.info .row .item p {
+  margin-top: 0.5rem;
+}
+.info .row:nth-child(2n - 1) {
+  background-color: #222939;
+}
+.info .row:nth-child(2n) {
+  background-color: #222D43;
+}

@@ -1,0 +1,43 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 22.5rem;
+    height: 13rem;
+    transform: translate(6rem,-13rem);
+    justify-content: center;
+    .item {
+        border-right: solid 1px #416388;
+        color: #fff;
+        font-size: .4rem;
+        text-align: center;
+        font-family: Monospace;
+        
+    }
+    .headline,.row {
+        .item {
+            flex: 1;
+        }
+    }
+
+    .headline {
+        display: flex;
+        flex: 1.5;
+        background-color: #1D3957;
+        .item p {
+            margin-top: 1rem;
+        }
+    }
+    .row {
+        display: flex;
+        flex: 1;
+        .item p {
+            margin-top: .6rem;
+        }
+    }
+    .row:nth-child(2n - 1) {
+        background-color: #222939;
+    }
+    .row:nth-child(2n) {
+        background-color: #222D43;
+    }
+}

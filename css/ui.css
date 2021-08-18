@@ -1,0 +1,119 @@
+@import "common.css";
+.head {
+  /* 定义一下几个盒子相同的部分 */
+  /* 定义一下旋转动画 */
+  height: 1.8rem;
+  width: 100%;
+  border-bottom: solid 2px #22CCFF;
+}
+.head .circle {
+  /* 圆形 */
+  border-radius: 50%;
+  transform: translate(0rem, -2.1rem) scale(0.2, 0.2);
+}
+.head .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* 元素走自身高度/宽度 的一半 */
+  transform: translate(-50%, -50%);
+}
+.head .container {
+  /* 相对定位 */
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #121414;
+  background-color: #384c50;
+  /* 盒子阴影 默认是外部阴影 写了inset 就是内部阴影 */
+  box-shadow: 0 0 32px 8px #121414, 0 0 4px 1px #121414 inset;
+}
+.head .container .box1 {
+  width: 238px;
+  height: 238px;
+  background-color: #161a1b;
+  box-shadow: 0 0 4px 1px #52fefe;
+}
+.head .container .box2 {
+  width: 220px;
+  height: 220px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 1px #52fefe, 0 0 5px 4px #52fefe inset;
+}
+.head .container .box3 {
+  width: 180px;
+  height: 180px;
+  background-color: #073c4b;
+  box-shadow: 0 0 5px 4px #52fefe, 0 0 6px 2px #52fefe inset;
+}
+.head .container .box4 {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #52fefe;
+  background-color: #fff;
+  box-shadow: 0 0 2px 1px #52fefe, 0 0 10px 5px #52fefe inset;
+}
+.head .container .box5 {
+  width: 70px;
+  height: 70px;
+  border: 5px solid #1b4e5f;
+  box-shadow: 0 0 7px 5px #52fefe, 0 0 10px 10px #52fefe inset;
+}
+.head .container .box6 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* 动画 名称 时长 linear 是匀速运动 infinite是无限次播放 */
+  animation: rotate 6s ease-in-out infinite;
+}
+.head .container .box6 .coil {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  /* calc方法自动计算位移距离 */
+  top: calc(50% - 110px);
+  left: calc(50% - 15px);
+  background-color: #073c4b;
+  box-shadow: 0 0 5px #52fefe inset;
+  /* calc方法自动计算数值 var函数调用了我们刚刚给元素定义的--i属性值 然后分别乘以45度 算出各自的度数 */
+  transform: rotate(calc(var(--i) * 45deg));
+  /* 这个是旋转的中心 */
+  transform-origin: center 110px;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.head p {
+  transform: translate(-7rem, -6rem);
+  line-height: 1.8rem;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Monospace;
+  color: #22CCFF;
+}
+.button {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  width: 20%;
+  border-right: solid 2px #22CCFF;
+}
+.button a {
+  display: block;
+  position: relative;
+  height: 20%;
+  line-height: 300%;
+  border: solid 1px #22CCFF;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(22, 204, 255, 0.2);
+  font-family: Monospace;
+  font-size: 0.8rem;
+  background-color: rgba(77, 174, 255, 0.6);
+  color: #fff;
+}

@@ -1,0 +1,136 @@
+#map {
+  transform: translate(5.8rem, -13.3rem);
+}
+.city {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 1;
+}
+.shanghai {
+  transform: translate(3.5rem, 3.5rem);
+}
+.beijing {
+  transform: translate(2.4rem, 0.9rem);
+}
+.shenzhen {
+  transform: translate(1.7rem, 5.8rem);
+}
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #07d;
+  border-radius: 50%;
+}
+.city div[class^="pulse"] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 12px #009dfd;
+  border-radius: 50%;
+}
+.city .pulse1 {
+  animation: grow 1s linear 0s infinite ;
+}
+.city .pulse2 {
+  animation: grow 1s infinite linear 0.4s;
+}
+.city .pulse3 {
+  animation: grow 1s infinite linear 0.8s;
+}
+@keyframes grow {
+  70% {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+  }
+  100% {
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+  }
+}
+.container {
+  height: 13rem;
+  width: 6.5rem;
+  transform: translate(22rem, -26.2rem);
+}
+.container p {
+  position: absolute;
+  color: #496781;
+  font-family: Monospace;
+}
+.container .top {
+  height: 20%;
+  border: solid 2px #19394F;
+}
+.container .top .left,
+.container .top .right {
+  position: relative;
+}
+.container .top .left p:nth-child(1),
+.container .top .right p:nth-child(1) {
+  font-size: 0.4rem;
+  left: 10%;
+  top: 10%;
+}
+.container .top .left p:nth-child(2),
+.container .top .right p:nth-child(2) {
+  font-size: 1rem;
+  right: 10%;
+  bottom: 10%;
+}
+.container .top .left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(15, 45, 68, 0.7);
+  border-right: solid 2px #19394F;
+}
+.container .top .right {
+  float: right;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(15, 45, 68, 0.7);
+}
+.container .bottom {
+  position: relative;
+  margin-top: 1rem;
+  height: 70%;
+  background-color: rgba(15, 45, 68, 0.6);
+  border: solid 2px #19394F;
+}
+.container .bottom p {
+  font-size: 0.3rem;
+}
+.container .bottom .line {
+  position: relative;
+  height: 20%;
+  border-bottom: solid 2px #496781;
+}
+.container .bottom .line p:nth-child(1) {
+  top: 20%;
+  font-weight: 700;
+}
+.container .bottom .line p:nth-child(2) {
+  bottom: 20%;
+}
+.container .bottom .line .box {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  height: 0.5rem;
+  width: 2rem;
+  border: solid 1px #496781;
+}
+.container .bottom .line .box p {
+  text-align: center;
+  line-height: 100%;
+}

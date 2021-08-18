@@ -1,0 +1,188 @@
+.button a:nth-child(1) {
+  background-color: aqua;
+  color: #000;
+  box-shadow: 0 0 50px aqua;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+  transition-delay: 0.4s;
+}
+.BOX {
+  float: right;
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  transform: translate(-1rem, -12.5rem);
+}
+.BOX .box {
+  position: relative;
+  height: 2.5rem;
+  width: 18%;
+  border-radius: 10px;
+  transition: all 0.3s;
+  /* 渐变加毛玻璃效果 */
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
+  /* 重点：元素背景模糊化 */
+  backdrop-filter: blur(11px);
+  /* 设置上高光，左高光 */
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-left: 1px solid rgba(255, 255, 255, 0.8);
+}
+.BOX .box p {
+  position: absolute;
+  font-size: 0.3rem;
+  color: #fff;
+  padding: 0.15rem;
+}
+.BOX .box p:nth-child(2) {
+  right: 0;
+}
+.BOX .box p:nth-child(3) {
+  top: 0.4rem;
+  left: 0.6rem;
+  font-size: 0.5rem;
+}
+.BOX .box p:nth-child(4) {
+  top: 1rem;
+}
+.BOX .box p:nth-child(5) {
+  top: 1.4rem;
+}
+.BOX .box p:nth-child(6) {
+  top: 1.8rem;
+}
+.BOX .box:hover {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8), inset 3px 3px 10px rgba(0, 0, 0, 0.3), inset -3px -3px 10px rgba(255, 255, 255, 0.6);
+}
+.BOX .box:nth-child(1) {
+  background: linear-gradient(to right bottom, rgba(249, 174, 9, 0.7), rgba(249, 174, 9, 0.4), rgba(249, 174, 9, 0.3));
+}
+.BOX .box:nth-child(2) {
+  background: linear-gradient(to right bottom, rgba(34, 204, 255, 0.7), rgba(34, 204, 255, 0.4), rgba(34, 204, 255, 0.3));
+}
+.BOX .box:nth-child(3) {
+  background: linear-gradient(to right bottom, rgba(189, 17, 31, 0.7), rgba(189, 17, 31, 0.4), rgba(189, 17, 31, 0.3));
+}
+.BOX .box:nth-child(4) {
+  background: linear-gradient(to right bottom, rgba(90, 24, 188, 0.7), rgba(90, 24, 188, 0.4), rgba(90, 24, 188, 0.3));
+}
+.BOX .box:nth-child(5) {
+  background: linear-gradient(to right bottom, rgba(234, 103, 38, 0.7), rgba(234, 103, 38, 0.4), rgba(234, 103, 38, 0.3));
+}
+.city {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 1;
+}
+.shanghai {
+  transform: translate(3.7rem, 5.3rem);
+}
+.beijing {
+  transform: translate(2.8rem, 3.4rem);
+}
+.shenzhen {
+  transform: translate(2.1rem, 7rem);
+}
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #07d;
+  border-radius: 50%;
+}
+.city div[class^="pulse"] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 12px #009dfd;
+  border-radius: 50%;
+}
+.city .pulse1 {
+  animation: grow 1s linear 0s infinite ;
+}
+.city .pulse2 {
+  animation: grow 1s infinite linear 0.4s;
+}
+.city .pulse3 {
+  animation: grow 1s infinite linear 0.8s;
+}
+@keyframes grow {
+  70% {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+  }
+  100% {
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+  }
+}
+#map {
+  transform: translate(7rem, -12rem);
+}
+.info {
+  position: relative;
+  background-color: #051B26;
+  float: right;
+  transform: translate(-1rem, -22rem);
+  height: 10rem;
+  width: 4rem;
+}
+.info .loading {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-bottom-color: #9370db;
+  border-top-color: #9370db;
+  color: #fff;
+  text-align: center;
+  line-height: 150px;
+  transform: translateY(1rem);
+}
+.info .loading::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-left-color: #ba55d3;
+  border-right-color: #ba55d3;
+  /* 伪元素速度=元素速度+本身速度，如果把伪元素动画去掉他们也会跟着
+        元素转动，所以这里before伪元素动画周期比元素长，却比他转的快 */
+}
+.info .loading::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #f0f;
+  border-bottom-color: #f0f;
+}
+.info > p {
+  color: #fff;
+  font-size: 0.5rem;
+}
+.info .line p {
+  position: absolute;
+  display: block;
+  width: 100%;
+  font-size: 0.4rem;
+  color: #fff;
+  border-bottom: solid 2px #22CCFF;
+  bottom: 0;
+}
